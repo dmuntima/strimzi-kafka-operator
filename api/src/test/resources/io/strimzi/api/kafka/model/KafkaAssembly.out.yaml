@@ -48,6 +48,10 @@ spec:
       value: "value2"
     config:
       min.insync.replicas: 3
+    authorization:
+      authorizer: "SimpleACLAuthorizer"
+    authentication:
+      tlsClientAuthentication: "required"
   zookeeper:
     replicas: 3
     image: "strimzi/zookeeper:latest"

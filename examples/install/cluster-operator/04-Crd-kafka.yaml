@@ -344,6 +344,24 @@ spec:
                               pattern: '[0-9]+([kKmMgGtTpPeE]i?)?$'
                 additionalProperties:
                   type: object
+                authentication:
+                  type: object
+                  properties:
+                    additionalProperties:
+                      type: object
+                    tlsClientAuthentication:
+                      type: string
+                      example: required
+                authorization:
+                  type: object
+                  properties:
+                    additionalProperties:
+                      type: object
+                    authorizer:
+                      type: string
+                      example: SimpleACLAuthorizer
+                  required:
+                  - authorizer
                 config:
                   type: object
                 logging:
